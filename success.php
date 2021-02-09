@@ -9,7 +9,7 @@
 <body>
     <!-- display successful message -->
     <div class="success-container">
-        <div class="message success-message">Email successfully added to the database</div>
+        <div class="message success-message">Email successfully saved.</div>
     </div>
 
 </body>

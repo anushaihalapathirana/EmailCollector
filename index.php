@@ -13,7 +13,7 @@
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
       <div class="container">
         <div class="title">Email:</div>
-        <input type="text" name="email" required="required" /> 
+        <input type="text" name="email" placeholder="Enter your email" required="required" /> 
 
         <!-- prevent multiple submitions in onclick-->
         <input type="submit" onclick="this.disabled=true; this.value='Sending, please wait...'; this.form.submit();"
@@ -52,7 +52,7 @@ if(!empty($_POST['email']) && $_SERVER["REQUEST_METHOD"] == "POST" ){
 
     // success and error messages display
     if ($conn->query($sql) === TRUE) {
-      echo '<div class="message success-message">Email added successfully.</div>';
+      echo '<div class="message success-message">Email successfully saved</div>';
       
     } else {
       echo '<div class="message ssage">Sorry there was an error. Please try again.</div>';
