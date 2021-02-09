@@ -1,18 +1,22 @@
 <?php
-    function OpenCon()
+
+include_once("constants.php");
+
+// database connection functions
+    function OpenDBConnection()
     {
-        $dbhost = "localhost";
-        $dbuser = "root";
-        $dbpass = "";
-        $db = "emailcollector";
-        $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed. Please Try again later ");
+        $dbhost = DATABASE_HOST;
+        $dbuser = DATABASE_USER;
+        $dbpass = DATABASE_PASSWORD;
+        $db = DATABASE_NAME;
+
+        $conn = new mysqli($dbhost, $dbuser, $dbpass, $db) or die("Connect failed. Please Try again later ");
 
         return $conn;
     }
     
-    function CloseCon($conn)
+    function CloseDBConnection($conn)
     {
         $conn -> close();
-    }
-    
+    } 
 ?>

@@ -1,16 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <title>Liana Technologies</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <h2>Registration Page</h2>
-      <div class="container">
-        <div class="title">Successfully added</div>
-        
-      </div>
-    
+<body>
+    <!-- display successful message -->
+    <div class="success-container">
+        <div class="message success-message">Email successfully added to the database</div>
+    </div>
 
 </body>
 </html>
