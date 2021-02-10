@@ -13,7 +13,7 @@
     <form method="POST">
       <div class="container">
         <div class="title">Email:</div>
-        <input type="text" name="email" placeholder="Enter your email" required="required" /> 
+        <input type="text" name="email" placeholder="Enter your email" required="required" autocomplete="off" /> 
 
         <!-- prevent multiple submitions in onclick-->
         <input type="submit" onclick="this.disabled=true; this.value='Sending, please wait...'; this.form.submit();"
@@ -55,13 +55,15 @@ if(!empty($_POST['email']) && $_SERVER["REQUEST_METHOD"] == "POST" ){
       echo '<div class="message success-message">Email successfully saved</div>';
       
     } else {
-      echo '<div class="message ssage">Sorry there was an error. Please try again.</div>';
+      echo '<div class="message error-message">Sorry there was an error. Please try again.</div>';
     }
+
+    CloseDBConnection($conn);
+
     // reset the email field redirected to success.php
     unset($email);
     header("Location: success.php");
-
-    CloseDBConnection($conn);
+    die();
   }
 }
 
