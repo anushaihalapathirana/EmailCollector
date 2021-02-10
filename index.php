@@ -10,7 +10,7 @@
   
     <h2>Email Collection System</h2>
     <!-- Form to collect email data -->
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+    <form method="POST">
       <div class="container">
         <div class="title">Email:</div>
         <input type="text" name="email" placeholder="Enter your email" required="required" /> 
