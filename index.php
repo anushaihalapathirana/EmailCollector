@@ -63,7 +63,6 @@ if(!empty($_POST['email']) && $_SERVER["REQUEST_METHOD"] == "POST" ){
     // reset the email field redirected to success.php
     unset($email);
     header("Location: success.php");
-    die();
   }
 }
 
